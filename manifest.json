@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "filmow-extension",
+	"version": "1.1",
+	"permissions": [
+		"activeTab"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.filmow.com/listas/*"],
+			"js": [
+				"jquery-3.3.1.min.js",
+				"random-js.js",
+				"functions.js",
+				"order.js",
+				"random.js",
+				"load_all.js"
+			],
+			"css": ["style.css"]
+		},
+		{
+			"matches": ["*://*.filmow.com/*"],
+			"js": [
+				"jquery-3.3.1.min.js",
+				"search_letterboxd.js"
+			]
+		}
+	]
+}
